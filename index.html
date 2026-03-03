@@ -299,7 +299,7 @@
             display: inline-block;
             border-bottom: 2px solid #00ffff;
             padding-bottom: 5px;
-            margin-bottom: 30px;
+            margin-bottom: 45px; /* увеличено для симметрии */
         }
         .nav-links .cyber-button {
             margin: 5px 2px !important;
@@ -361,7 +361,7 @@
             .subtitle { font-size: 1rem; letter-spacing: 4px; }
             h1 { 
                 font-size: 1.8rem !important; 
-                margin-top: 20px !important; 
+                margin-top: 45px !important; 
             }
             .main-container { padding: 10px; }
             .cyber-button { padding: 10px 20px; font-size: 0.9rem; }
@@ -385,11 +385,14 @@
                 font-size: 1.5rem;
                 letter-spacing: 3px;
             }
+            .nav-links {
+                margin-bottom: 45px; /* сохраняем отступ на мобильных */
+            }
         }
         @media (max-width: 480px) {
             h1 { 
                 font-size: 1.5rem !important; 
-                margin-top: 15px !important;
+                margin-top: 45px !important;
             }
             .logo { font-size: 2rem; }
             .subtitle { letter-spacing: 2px; }
@@ -432,7 +435,7 @@
         </div>
 
         <!-- Герой-секция -->
-        <div style="text-align: center; margin: 40px 0;">
+        <div style="text-align: center; margin: 45px 0 40px;"> <!-- верхний отступ увеличен до 45px -->
             <h1 style="font-size: 2.5rem; margin-bottom: 20px; background: linear-gradient(135deg, #fff, #aaa); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Освободи руки<br>от повторяющихся кликов</h1>
             <p style="max-width: 700px; margin: 0 auto 30px; color: #aaa;">SceneClick автоматизирует любые действия мышью, чтобы вы сосредоточились на важном. Работает там, где нужна монотонная рутина — заполнение форм, тестирование, обработка документов.</p>
             <a href="https://disk.yandex.ru/d/HA8-rGDuaic9wg" class="cyber-button download">📥 Скачать бесплатно</a>
