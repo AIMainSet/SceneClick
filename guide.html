@@ -230,18 +230,31 @@
             body { overflow-x: hidden; }
             .logo { font-size: 2.5rem; }
             .subtitle { font-size: 1rem; letter-spacing: 4px; }
-            h1 { font-size: 1.8rem !important; }
+            h1 { 
+                font-size: 1.8rem !important; 
+                margin-top: 20px !important; 
+            }
             .main-container { padding: 10px; }
             .cyber-button { padding: 10px 20px; font-size: 0.9rem; margin: 5px 2px !important; }
             .card { padding: 15px; }
             .footer { flex-direction: column; gap: 10px; text-align: center; }
             .footer a { margin: 0 10px; }
+            /* Исправление вылезающих списков */
+            .card ol, .card ul {
+                padding-left: 25px;
+            }
         }
         @media (max-width: 480px) {
-            h1 { font-size: 1.5rem !important; }
+            h1 { 
+                font-size: 1.5rem !important; 
+                margin-top: 15px !important; 
+            }
             .logo { font-size: 2rem; }
             .subtitle { letter-spacing: 2px; }
             .cyber-button { padding: 8px 12px; font-size: 0.8rem; }
+            .card ol, .card ul {
+                padding-left: 20px;
+            }
         }
     </style>
 </head>
