@@ -5,9 +5,7 @@
     <meta name="yandex-verification" content="5183244512dcf4b8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SceneClick — автоматизация кликов</title>
-    <!-- Шрифты и Tailwind -->
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
-    <!-- Иконка сайта -->
     <link rel="icon" type="image/x-icon" href="/images/sceneclick.ico">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciICB2aWV3Qm94PSIwIDAgNDggNDgiIHdpZHRoPSI0OHB4IiBoZWlnaHQ9IjQ4cHgiIGJhc2VQcm9maWxlPSJiYXNpYyI+PHBhdGggZmlsbD0iIzkwYTRhZSIgZD0iTTM2LjE0OSwyNS4yNDJMMTguNTc5LDkuMDU1VjdoLTMuMTFjLTAuMDY1LDAuMDAzLTIuMTkyLTAuMDAzLTIuMTkyLDIuMTgydjI1LjgzOAljMCwxLjc1NCwxLjUyMywyLjEwNywyLjExNCwyLjEwOWgzLjE4NHYtMi4wOGwyLjY0OS0yLjQzbDMuOSw4LjkxOGMwLjM2NywwLjkyLDEuMjY0LDEuNDAzLDIuMTUzLDEuNDQ3VjQzaDN2LTEuMDZsMS41MTgtMC42ODIJYzAuNTI4LTAuMjM0LDAuOTI0LTAuNjU0LDEuMTE2LTEuMTg1YzAuMjAzLTAuNTU5LDAuMTU2LTEuMTc5LTAuMTE3LTEuNzE1bC00LjA2LTguNjk3bDYuMDk2LTAuNTcxbDAuMTUyLTAuMDI2CWMxLjI5Mi0wLjMxNywxLjY5OS0xLjEyNSwxLjgyOC0xLjU3OUMzNy4wMjMsMjYuNzI3LDM2Ljc3NCwyNS44NTYsMzYuMTQ5LDI1LjI0MnoiLz48cGF0aCBmaWxsPSIjZTBlMGUwIiBzdHJva2U9IiMzNzQ3NGYiIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIgc3Ryb2tlLXdpZHRoPSIyIiBkPSJNMjkuMTM3LDQxLjE1NmwtNC40ODItMTAuMjQ4bC01LjM3Nyw0LjkzMgljLTAuNjU2LDAuNTU5LTEuOTEyLDAuMzA3LTEuOTEyLTAuODIyVjkuMTgyYzAtMS4xNTQsMS4zMjUtMS41MTYsMi4wMzEtMC44MjJsMTkuMTIsMTcuNjE2YzAuNTc2LDAuNTY2LDAuNzIzLDEuNzYtMC43MTcsMi4xMTQJbC03LjUyOCwwLjcwNWw0LjY2LDkuOTgyYzAuMzMsMC42NDgsMC4wODIsMS4zMTEtMC40ODksMS41NjVsLTMuNTc0LDEuNjA2QzMwLjI5OCw0Mi4xNTIsMjkuNDE4LDQxLjg4NCwyOS4xMzcsNDEuMTU2eiIvPjwvc3ZnPg==">
     <style>
@@ -265,7 +263,7 @@
             letter-spacing: 5px;
             border-bottom: 2px solid #00ffff;
             padding-bottom: 5px;
-            display: inline-block; /* чтобы рамка была только под текстом */
+            display: inline-block;
         }
         .antivirus-note {
             max-width: 600px;
@@ -310,6 +308,29 @@
             font-size: 0.95rem;
             line-height: 1.5;
         }
+
+        /* Мобильная адаптация */
+        @media (max-width: 768px) {
+            body { overflow-x: hidden; }
+            .logo { font-size: 2.5rem; }
+            .subtitle { font-size: 1rem; letter-spacing: 4px; }
+            h1 { font-size: 1.8rem !important; }
+            .main-container { padding: 10px; }
+            .cyber-button { padding: 10px 20px; font-size: 0.9rem; margin: 5px 2px !important; }
+            .features-grid { grid-template-columns: 1fr !important; gap: 15px; }
+            .use-cases-grid { grid-template-columns: 1fr !important; gap: 15px; }
+            .card[style*="padding: 30px;"] { padding: 20px !important; }
+            .card[style*="padding: 30px;"] div[style*="display: flex;"] { flex-direction: column; text-align: center; }
+            .card[style*="padding: 30px;"] div[style*="text-align: left;"] { text-align: center !important; }
+            .footer { flex-direction: column; gap: 10px; text-align: center; }
+            .footer a { margin: 0 10px; }
+        }
+        @media (max-width: 480px) {
+            h1 { font-size: 1.5rem !important; }
+            .logo { font-size: 2rem; }
+            .subtitle { letter-spacing: 2px; }
+            .cyber-button { padding: 8px 12px; font-size: 0.8rem; }
+        }
     </style>
 </head>
 <body>
@@ -319,26 +340,32 @@
         <div class="grid-lines"></div>
         <div class="particles" id="particles"></div>
     </div>
-
-    <!-- Сканирующие линии -->
     <div class="scanlines"></div>
-
-    <!-- Угловые элементы -->
     <div class="corner corner-tl"></div>
     <div class="corner corner-tr"></div>
     <div class="corner corner-bl"></div>
     <div class="corner corner-br"></div>
-
-    <!-- Случайное число для атмосферы -->
     <div class="random-digit">01001110 01100101 01101111 01101110</div>
 
-    <!-- Основное содержимое -->
     <div class="main-container">
-        <!-- Логотип -->
         <div class="logo">SCENECLICK</div>
         <div class="subtitle">◈ АВТОМАТИЗАЦИЯ КЛИКОВ ◈</div>
 
-        <!-- Герой-секция с кнопкой -->
+        <!-- Навигация -->
+        <div style="text-align: center; margin: 30px 0;">
+            <a href="index.html" class="cyber-button" style="margin: 5px;">Главная</a>
+            <a href="download.html" class="cyber-button" style="margin: 5px;">Скачать</a>
+            <a href="guide.html" class="cyber-button" style="margin: 5px;">Инструкция</a>
+            <a href="faq.html" class="cyber-button" style="margin: 5px;">FAQ</a>
+            <a href="about.html" class="cyber-button" style="margin: 5px;">О проекте</a>
+            <a href="changelog.html" class="cyber-button" style="margin: 5px;">Версии</a>
+            <a href="privacy.html" class="cyber-button" style="margin: 5px;">Приватность</a>
+            <a href="terms.html" class="cyber-button" style="margin: 5px;">Условия</a>
+            <a href="contact.html" class="cyber-button" style="margin: 5px;">Контакты</a>
+            <a href="donate.html" class="cyber-button" style="margin: 5px;">Поддержать</a>
+        </div>
+
+        <!-- Герой-секция -->
         <div style="text-align: center; margin: 40px 0;">
             <h1 style="font-size: 2.5rem; margin-bottom: 20px; background: linear-gradient(135deg, #fff, #aaa); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Освободи руки<br>от повторяющихся кликов</h1>
             <p style="max-width: 700px; margin: 0 auto 30px; color: #aaa;">SceneClick автоматизирует любые действия мышью, чтобы вы сосредоточились на важном. Работает там, где нужна монотонная рутина — заполнение форм, тестирование, обработка документов.</p>
@@ -351,17 +378,15 @@
             </div>
         </div>
 
-        <!-- Скриншот (замените на реальный) -->
+        <!-- Скриншот -->
         <div style="margin: 60px auto; max-width: 800px;">
             <div class="card" style="padding: 10px;">
                 <img src="images/sceneclick.jpg" alt="SceneClick интерфейс" style="width:100%; border-radius: 4px;" onerror="this.onerror=null; this.style.display='none'; this.parentElement.innerHTML='[ Скриншот временно недоступен ]';">
             </div>
         </div>
 
-        <!-- Заголовок h2 для раздела преимуществ -->
+        <!-- Основные возможности -->
         <h2 style="color: #00ffff; text-align: center; margin-bottom: 30px; font-size: 2rem;">Основные возможности</h2>
-
-        <!-- Преимущества (4 карточки) -->
         <div class="features-grid">
             <div class="card">
                 <div style="font-size: 2rem; margin-bottom: 10px;">🎬</div>
@@ -385,7 +410,7 @@
             </div>
         </div>
 
-        <!-- Блок доверия (без оценки) -->
+        <!-- Блок доверия -->
         <div class="trust-grid">
             <div class="trust-item">
                 <div class="trust-number">+10 000</div>
@@ -397,7 +422,7 @@
             </div>
         </div>
 
-        <!-- Сценарии использования – исправленный заголовок -->
+        <!-- Сценарии использования -->
         <h2 class="section-title">ДЛЯ ЧЕГО ПРИГОДИТСЯ</h2>
         <div class="use-cases-grid">
             <div class="card">
@@ -418,7 +443,7 @@
             </div>
         </div>
 
-        <!-- Добавляем заголовок h2 перед блоком поддержки -->
+        <!-- Поддержка проекта -->
         <h2 style="color: #00ffff; text-align: center; margin-bottom: 20px;">Поддержать проект</h2>
         <div style="margin: 60px auto; max-width: 800px;">
             <div class="card" style="padding: 30px; background: rgba(10,10,20,0.9); border: 1px solid rgba(255, 215, 0, 0.4); box-shadow: 0 0 30px rgba(255, 215, 0, 0.2); text-align: center;">
