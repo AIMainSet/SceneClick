@@ -281,17 +281,35 @@
             text-orientation: upright;
             letter-spacing: -5px;
         }
-        h2.section-title {
+
+        /* Единый стиль для заголовков разделов */
+        .section-header {
             font-size: 2rem;
             text-align: center;
+            color: #00ffff;
+            border-top: 2px solid #00ffff;
+            padding-top: 5px;
             margin: 40px 0 20px;
-            color: #fff;
             text-transform: uppercase;
             letter-spacing: 5px;
+        }
+
+        /* Навигация: inline-block, чтобы подчеркивание было по ширине кнопок */
+        .nav-links {
+            display: inline-block;
             border-bottom: 2px solid #00ffff;
             padding-bottom: 5px;
-            /* display: inline-block; – удалено для центрирования с подчёркиванием на всю ширину */
+            margin-bottom: 30px;
         }
+        .nav-links .cyber-button {
+            margin: 5px 2px !important;
+        }
+        /* Центрирование блока навигации */
+        .nav-wrapper {
+            text-align: center;
+            margin: 30px 0;
+        }
+
         .antivirus-note {
             max-width: 600px;
             margin-left: auto;
@@ -346,7 +364,7 @@
                 margin-top: 20px !important; 
             }
             .main-container { padding: 10px; }
-            .cyber-button { padding: 10px 20px; font-size: 0.9rem; margin: 5px 2px !important; }
+            .cyber-button { padding: 10px 20px; font-size: 0.9rem; }
             .features-grid { grid-template-columns: 1fr !important; gap: 15px; }
             .use-cases-grid { grid-template-columns: 1fr !important; gap: 15px; }
             .card[style*="padding: 30px;"] { padding: 20px !important; }
@@ -362,6 +380,10 @@
             .trust-item {
                 text-align: center;
                 width: 100%;
+            }
+            .section-header {
+                font-size: 1.5rem;
+                letter-spacing: 3px;
             }
         }
         @media (max-width: 480px) {
@@ -393,18 +415,20 @@
         <div class="logo">SCENECLICK</div>
         <div class="subtitle">◈ АВТОМАТИЗАЦИЯ КЛИКОВ ◈</div>
 
-        <!-- Навигация -->
-        <div style="text-align: center; margin: 30px 0;">
-            <a href="index.html" class="cyber-button" style="margin: 5px;">Главная</a>
-            <a href="download.html" class="cyber-button" style="margin: 5px;">Скачать</a>
-            <a href="guide.html" class="cyber-button" style="margin: 5px;">Инструкция</a>
-            <a href="faq.html" class="cyber-button" style="margin: 5px;">FAQ</a>
-            <a href="about.html" class="cyber-button" style="margin: 5px;">О проекте</a>
-            <a href="changelog.html" class="cyber-button" style="margin: 5px;">Версии</a>
-            <a href="privacy.html" class="cyber-button" style="margin: 5px;">Приватность</a>
-            <a href="terms.html" class="cyber-button" style="margin: 5px;">Условия</a>
-            <a href="contact.html" class="cyber-button" style="margin: 5px;">Контакты</a>
-            <a href="donate.html" class="cyber-button" style="margin: 5px;">Поддержать</a>
+        <!-- Навигация с подчёркиванием под кнопками -->
+        <div class="nav-wrapper">
+            <div class="nav-links">
+                <a href="index.html" class="cyber-button" style="margin: 5px;">Главная</a>
+                <a href="download.html" class="cyber-button" style="margin: 5px;">Скачать</a>
+                <a href="guide.html" class="cyber-button" style="margin: 5px;">Инструкция</a>
+                <a href="faq.html" class="cyber-button" style="margin: 5px;">FAQ</a>
+                <a href="about.html" class="cyber-button" style="margin: 5px;">О проекте</a>
+                <a href="changelog.html" class="cyber-button" style="margin: 5px;">Версии</a>
+                <a href="privacy.html" class="cyber-button" style="margin: 5px;">Приватность</a>
+                <a href="terms.html" class="cyber-button" style="margin: 5px;">Условия</a>
+                <a href="contact.html" class="cyber-button" style="margin: 5px;">Контакты</a>
+                <a href="donate.html" class="cyber-button" style="margin: 5px;">Поддержать</a>
+            </div>
         </div>
 
         <!-- Герой-секция -->
@@ -428,7 +452,7 @@
         </div>
 
         <!-- Основные возможности -->
-        <h2 style="color: #00ffff; text-align: center; margin-bottom: 30px; font-size: 2rem;">Основные возможности</h2>
+        <h2 class="section-header">Основные возможности</h2>
         <div class="features-grid">
             <div class="card">
                 <div style="font-size: 2rem; margin-bottom: 10px;">🎬</div>
@@ -465,7 +489,7 @@
         </div>
 
         <!-- Сценарии использования -->
-        <h2 class="section-title">ДЛЯ ЧЕГО ПРИГОДИТСЯ</h2>
+        <h2 class="section-header">ДЛЯ ЧЕГО ПРИГОДИТСЯ</h2>
         <div class="use-cases-grid">
             <div class="card">
                 <h3>🖥️ Работа с документами</h3>
@@ -486,7 +510,7 @@
         </div>
 
         <!-- Поддержка проекта -->
-        <h2 style="color: #00ffff; text-align: center; margin-bottom: 20px;">Поддержать проект</h2>
+        <h2 class="section-header">Поддержать проект</h2>
         <div style="margin: 60px auto; max-width: 800px;">
             <div class="card" style="padding: 30px; background: rgba(10,10,20,0.9); border: 1px solid rgba(255, 215, 0, 0.4); box-shadow: 0 0 30px rgba(255, 215, 0, 0.2); text-align: center;">
                 <div style="display: flex; align-items: center; justify-content: center; gap: 20px; flex-wrap: wrap;">
