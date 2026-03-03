@@ -225,6 +225,22 @@
             letter-spacing: -5px;
         }
 
+        /* Навигация: inline-block, чтобы подчеркивание было по ширине кнопок */
+        .nav-links {
+            display: inline-block;
+            border-bottom: 2px solid #00ffff;
+            padding-bottom: 5px;
+            margin-bottom: 30px;
+        }
+        .nav-links .cyber-button {
+            margin: 5px 2px !important;
+        }
+        /* Центрирование блока навигации */
+        .nav-wrapper {
+            text-align: center;
+            margin: 30px 0;
+        }
+
         /* Мобильная адаптация */
         @media (max-width: 768px) {
             body { overflow-x: hidden; }
@@ -235,11 +251,10 @@
                 margin-top: 20px !important; 
             }
             .main-container { padding: 10px; }
-            .cyber-button { padding: 10px 20px; font-size: 0.9rem; margin: 5px 2px !important; }
+            .cyber-button { padding: 10px 20px; font-size: 0.9rem; }
             .card { padding: 15px; }
             .footer { flex-direction: column; gap: 10px; text-align: center; }
             .footer a { margin: 0 10px; }
-            /* Исправление вылезающих списков */
             .card ol, .card ul {
                 padding-left: 25px;
             }
@@ -275,18 +290,20 @@
         <div class="logo">SCENECLICK</div>
         <div class="subtitle">◈ АВТОМАТИЗАЦИЯ КЛИКОВ ◈</div>
 
-        <!-- Навигация -->
-        <div style="text-align: center; margin: 30px 0;">
-            <a href="index.html" class="cyber-button" style="margin: 5px;">Главная</a>
-            <a href="download.html" class="cyber-button" style="margin: 5px;">Скачать</a>
-            <a href="guide.html" class="cyber-button" style="margin: 5px;">Инструкция</a>
-            <a href="faq.html" class="cyber-button" style="margin: 5px;">FAQ</a>
-            <a href="about.html" class="cyber-button" style="margin: 5px;">О проекте</a>
-            <a href="changelog.html" class="cyber-button" style="margin: 5px;">Версии</a>
-            <a href="privacy.html" class="cyber-button" style="margin: 5px;">Приватность</a>
-            <a href="terms.html" class="cyber-button" style="margin: 5px;">Условия</a>
-            <a href="contact.html" class="cyber-button" style="margin: 5px;">Контакты</a>
-            <a href="donate.html" class="cyber-button" style="margin: 5px;">Поддержать</a>
+        <!-- Навигация с подчёркиванием под кнопками -->
+        <div class="nav-wrapper">
+            <div class="nav-links">
+                <a href="index.html" class="cyber-button" style="margin: 5px;">Главная</a>
+                <a href="download.html" class="cyber-button" style="margin: 5px;">Скачать</a>
+                <a href="guide.html" class="cyber-button" style="margin: 5px;">Инструкция</a>
+                <a href="faq.html" class="cyber-button" style="margin: 5px;">FAQ</a>
+                <a href="about.html" class="cyber-button" style="margin: 5px;">О проекте</a>
+                <a href="changelog.html" class="cyber-button" style="margin: 5px;">Версии</a>
+                <a href="privacy.html" class="cyber-button" style="margin: 5px;">Приватность</a>
+                <a href="terms.html" class="cyber-button" style="margin: 5px;">Условия</a>
+                <a href="contact.html" class="cyber-button" style="margin: 5px;">Контакты</a>
+                <a href="donate.html" class="cyber-button" style="margin: 5px;">Поддержать</a>
+            </div>
         </div>
 
         <!-- Содержимое страницы "Инструкция" -->
